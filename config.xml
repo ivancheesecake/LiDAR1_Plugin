@@ -1,0 +1,18 @@
+<ESRI.Configuration xmlns="http://schemas.esri.com/Desktop/AddIns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><Name>Phil-LiDAR 1 UPLB Addin</Name><AddInID>{66040fcb-6326-41b2-a0a8-d800a89308cf}</AddInID><Description>Tools for Phil-LiDAR 1 UPLB</Description><Version>1.4</Version><Image>Images\plugin-logo.png</Image><Author>Phil-LiDAR 1 UPLB</Author><Company>Phil-LiDAR 1 UPLB</Company><Date>11/26/2015</Date><Targets><Target name="Desktop" version="10.2" /></Targets><AddIn language="PYTHON" library="LiDAR1_Plugin_addin.py" namespace="LiDAR1_Plugin_addin"><ArcMap>
+    <Commands>
+        <Button caption="Generate Center Line and Flow Paths" category="Phil-LiDAR 1 UPLB Addin" class="CenterLines" id="LiDAR1_Plugin_addin.button" image="Images\river.png" message="Generate center line and flow paths using two river bank feature classes" tip="Generate Center Line and Flow Paths"><Help heading="" /></Button>
+        <Button caption="Calculate RMSE" category="Phil-LiDAR 1 UPLB Addin" class="CalculateRMSE" id="LiDAR1_Plugin_addin.buttonRMSE" image="Images\rmse.png" message="Calculate the RMSE for DTM Calibration" tip="Calculate RMSE"><Help heading="" /></Button>
+        <Button caption="Calibrate DTM" category="Phil-LiDAR 1 UPLB Addin" class="CalibrateDTM" id="LiDAR1_Plugin_addin.buttonCalibrateDTM" image="Images\calibrate.png" message="Adjust the raster values of the DTM using the recently calculated RMSE value" tip="Calibrate DTM"><Help heading="" /></Button>
+        <Button caption="Generate Indices" category="Phil-LiDAR 1 UPLB Addin" class="ButtonGenerateIndices" id="LiDAR1_Plugin_addin.buttonIndices" image="Images\grid.png" message="Generate indices for raster data blocks" tip="Generate Indices"><Help heading="" /></Button>
+        <Button caption="Load Indices" category="Phil-LiDAR 1 UPLB Addin" class="LoadIndices" id="LiDAR1_Plugin_addin.loadindices" image="Images\grid2.png" message="Load raster data blocks based on a clipped feature class." tip="Load Indices"><Help heading="" /></Button>
+        <Button caption="Apply Symbology" category="Phil-LiDAR 1 UPLB Addin" class="ApplySymbology" id="LiDAR1_Plugin_addin.applysymbology" image="Images\symbology.png" message="Apply symbology to the DEM and Hillshade layers" tip="Apply Symbology"><Help heading="" /></Button>
+        <Button caption="Split Shapemask" category="Phil-LiDAR 1 UPLB Addin" class="SplitShpmask" id="LiDAR1_Plugin_addin.splitshpmask" image="Images\split.png" message="Split Shapemask" tip="Split Shapemask"><Help heading="" /></Button>
+        </Commands>
+    <Extensions>
+        </Extensions>
+    <Toolbars>
+        <Toolbar caption="Phil-LiDAR UPLB Tools" category="Phil-LiDAR 1 UPLB Addin" id="LiDAR1_Plugin_addin.toolbar" showInitially="true"><Items><Button refID="LiDAR1_Plugin_addin.button" /><Button refID="LiDAR1_Plugin_addin.buttonRMSE" /><Button refID="LiDAR1_Plugin_addin.buttonCalibrateDTM" /><Button refID="LiDAR1_Plugin_addin.buttonIndices" /><Button refID="LiDAR1_Plugin_addin.loadindices" /><Button refID="LiDAR1_Plugin_addin.applysymbology" /><Button refID="LiDAR1_Plugin_addin.splitshpmask" /></Items></Toolbar>
+        </Toolbars>
+    <Menus>
+        </Menus>
+    </ArcMap></AddIn></ESRI.Configuration>
