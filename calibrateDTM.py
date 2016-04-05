@@ -12,7 +12,7 @@ try:
 	data = []
 
 	# Read the text file
-	text_file = open("C:/LiDAR1_Plugin_1.1/rmse/rmse.txt", "r")
+	text_file = open("C:/LiDAR1_Plugin_1.4/rmse/rmse.txt", "r")
 
 	for line in text_file:
 		data.append(float(line))

@@ -50,13 +50,13 @@ def showStats(title, stats, fileName):
 
 	msg = "\n============= "+title+" =============\n" + "RMSE: " + str(stats[0]) +"\n" + "AVG: "+str(stats[1]) + "\n" +"STDEV: "+str(stats[2]) + "\n" +"AVG-2*SD: "+str(stats[3]) + "\n" +"AVG_2*SD: "+str(stats[4]) + "\n" +"R^2 "+str(stats[5]) + "\n" +"====================================================>\n"
 	arcpy.AddMessage(msg)
-	text_file = open("C:/LiDAR1_Plugin_1.1/rmse/"+fileName+".txt", "w")
+	text_file = open("C:/LiDAR1_Plugin_1.4/rmse/"+fileName+".txt", "w")
 	text_file.write(msg)
 	text_file.close()
 
 #	Function that outputs a text file containing the logs of removed outliers
 def outlierLog(msg):
-	text_file = open("C:/LiDAR1_Plugin_1.1/rmse/outlierLog.txt", "w")
+	text_file = open("C:/LiDAR1_Plugin_1.4/rmse/outlierLog.txt", "w")
 	text_file.write(msg)
 	text_file.close()
 
@@ -64,7 +64,7 @@ def outlierLog(msg):
 def renderScatterplot(orthoList, rasterList, filename):
 	arcpy.AddMessage("Generating scatterplot...")
 	matplotlib.pyplot.scatter(orthoList,rasterList)
-	matplotlib.pyplot.savefig("C:/LiDAR1_Plugin_1.1/rmse/"+filename+".png")
+	matplotlib.pyplot.savefig("C:/LiDAR1_Plugin_1.4/rmse/"+filename+".png")
 	matplotlib.pyplot.close()
 
 try:
@@ -73,7 +73,7 @@ try:
 	featureIn = arcpy.GetParameterAsText(0)
 	rasterIn = arcpy.GetParameterAsText(1)
 	rsqThresh = float(arcpy.GetParameterAsText(2))
-	featureOut = "C:/LiDAR1_Plugin_1.1/rmse/val_lidar.shp"
+	featureOut = "C:/LiDAR1_Plugin_1.4/rmse/val_lidar.shp"
 
 	# Initialize variables
 	rows = []
@@ -170,7 +170,7 @@ try:
 	renderScatterplot(orthoListCleaned,rasterListCleaned,"scatterCleaned")
 
 	# Write calculated RMSE and AVG into a text file
-	text_file = open("C:/LiDAR1_Plugin_1.1/rmse/rmse.txt", "w")
+	text_file = open("C:/LiDAR1_Plugin_1.4/rmse/rmse.txt", "w")
 	text_file.write(str(stats[0])+"\n"+str(stats[1]))
 	text_file.close()
 
